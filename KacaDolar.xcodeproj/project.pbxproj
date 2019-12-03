@@ -14,6 +14,8 @@
 		E3C14A6F23928A05000089B9 /* KacaDolar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3C14A6D23928A05000089B9 /* KacaDolar.xcdatamodeld */; };
 		E3C14A7123928A06000089B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3C14A7023928A06000089B9 /* Assets.xcassets */; };
 		E3C14A7423928A06000089B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C14A7223928A06000089B9 /* LaunchScreen.storyboard */; };
+		E3C14A7D2392F934000089B9 /* Doviz.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C14A7C2392F934000089B9 /* Doviz.swift */; };
+		E3C14A802392FA16000089B9 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C14A7F2392FA16000089B9 /* Webservice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E3C14A7023928A06000089B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3C14A7323928A06000089B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3C14A7523928A06000089B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3C14A7C2392F934000089B9 /* Doviz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doviz.swift; sourceTree = "<group>"; };
+		E3C14A7F2392FA16000089B9 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		E3C14A6323928A05000089B9 /* KacaDolar */ = {
 			isa = PBXGroup;
 			children = (
+				E3C14A7E2392FA08000089B9 /* WebService */,
+				E3C14A7B2392F905000089B9 /* Model */,
 				E3C14A6423928A05000089B9 /* AppDelegate.swift */,
 				E3C14A6623928A05000089B9 /* SceneDelegate.swift */,
 				E3C14A6823928A05000089B9 /* ViewController.swift */,
@@ -68,6 +74,22 @@
 				E3C14A6D23928A05000089B9 /* KacaDolar.xcdatamodeld */,
 			);
 			path = KacaDolar;
+			sourceTree = "<group>";
+		};
+		E3C14A7B2392F905000089B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E3C14A7C2392F934000089B9 /* Doviz.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E3C14A7E2392FA08000089B9 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				E3C14A7F2392FA16000089B9 /* Webservice.swift */,
+			);
+			path = WebService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +165,9 @@
 			files = (
 				E3C14A6F23928A05000089B9 /* KacaDolar.xcdatamodeld in Sources */,
 				E3C14A6923928A05000089B9 /* ViewController.swift in Sources */,
+				E3C14A802392FA16000089B9 /* Webservice.swift in Sources */,
 				E3C14A6523928A05000089B9 /* AppDelegate.swift in Sources */,
+				E3C14A7D2392F934000089B9 /* Doviz.swift in Sources */,
 				E3C14A6723928A05000089B9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
