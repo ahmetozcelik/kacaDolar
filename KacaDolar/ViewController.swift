@@ -10,11 +10,12 @@ import UIKit
 
 let myUrl = "https://finans.truncgil.com/today.json"
 let url = URL(string: myUrl)!
-let myData = try! Data(contentsOf: url)
-var jsonDecoder = JSONDecoder()
 var dolarKuru:Double?
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var sayi: UITextField!
+    @IBOutlet weak var exchangeTL: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,25 +23,18 @@ class ViewController: UIViewController {
        exchange()
     }
     func exchange() {
-        
-               let dovizler = try? jsonDecoder.decode(Doviz.self, from: myData)
-               
-               if let doviz = dovizler {
+        guard let myData = try? Data(contentsOf: url) else { return print("HATA") }
+            let dovizler = try? JSONDecoder().decode(Doviz.self, from: myData)
+            
+            if let doviz = dovizler {
                 print(doviz)
                 dolarKuru = Double(doviz.ABDDOLARI.satis!)
-                    
-                  
-               }
-               
+            }
     }
-    
-    @IBOutlet weak var sayi: UITextField!
-    @IBOutlet weak var exchangeTL: UILabel!
-    
     @IBAction func exhangeTL(_ sender: Any) {
         if let sayi1 = Double(sayi.text!){
-            exchangeTL.text = String(sayi1 * dolarKuru!)
-       
+            if let dolarK = dolarKuru{
+                exchangeTL.text = String(sayi1 * dolarK)}
         }
     }
 }

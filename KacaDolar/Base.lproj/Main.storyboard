@@ -50,7 +50,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="exchangeTL" destination="bpi-rV-TAj" id="iKq-DT-e0c"/>
+                        <outlet property="exchangeTL" destination="bpi-rV-TAj" id="cIl-59-TAd"/>
                         <outlet property="sayi" destination="jxB-A2-VV4" id="Vsa-oA-KeN"/>
                     </connections>
                 </viewController>
