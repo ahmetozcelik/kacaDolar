@@ -14,8 +14,8 @@ var dolarKuru:Double?
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var sayi: UITextField!
-    @IBOutlet weak var exchangeTL: UILabel!
+    @IBOutlet weak var sayiInput: UITextField!
+    @IBOutlet weak var convertLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,18 +23,18 @@ class ViewController: UIViewController {
        exchange()
     }
     func exchange() {
-        guard let myData = try? Data(contentsOf: url) else { return print("HATA") }
+        guard let myData = try? Data(contentsOf: url) else { return print("Veri yok. Internet baglantisini kontrol edin.") }
             let dovizler = try? JSONDecoder().decode(Doviz.self, from: myData)
             
             if let doviz = dovizler {
                 print(doviz)
-                dolarKuru = Double(doviz.ABDDOLARI.satis!)
+                dolarKuru = Double(doviz.dolar.satis!)
             }
     }
-    @IBAction func exhangeTL(_ sender: Any) {
-        if let sayi1 = Double(sayi.text!){
-            if let dolarK = dolarKuru{
-                exchangeTL.text = String(sayi1 * dolarK)}
+    @IBAction func exchangeBtn(_ sender: Any) {
+        if let sayi1 = Double(sayiInput.text!){
+            if let dolarKur = dolarKuru{
+                convertLabel.text = String(sayi1 * dolarKur)}
         }
     }
 }

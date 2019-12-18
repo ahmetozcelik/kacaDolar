@@ -9,10 +9,10 @@
 import Foundation
 
 struct Doviz:Codable {
-    var ABDDOLARI:Dolar
+    var dolar:Dolar
     
     enum CodingKeys: String, CodingKey{
-        case ABDDOLARI = "ABD DOLARI"
+        case dolar = "ABD DOLARI"
     }
 }
 

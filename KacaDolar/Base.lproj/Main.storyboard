@@ -28,7 +28,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="changeDolar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpi-rV-TAj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpi-rV-TAj">
                                 <rect key="frame" x="226" y="95" width="133" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -42,7 +42,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="exhangeTL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Bq-Vj-pDJ"/>
+                                    <action selector="exchangeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Bq-Vj-pDJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -50,8 +50,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="exchangeTL" destination="bpi-rV-TAj" id="cIl-59-TAd"/>
-                        <outlet property="sayi" destination="jxB-A2-VV4" id="Vsa-oA-KeN"/>
+                        <outlet property="convertLabel" destination="bpi-rV-TAj" id="cIl-59-TAd"/>
+                        <outlet property="sayiInput" destination="jxB-A2-VV4" id="Vsa-oA-KeN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
