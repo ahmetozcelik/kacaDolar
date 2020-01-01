@@ -41,6 +41,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E30E5A8B23B947200089F502 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E3C14A6423928A05000089B9 /* AppDelegate.swift */,
+				E3C14A6823928A05000089B9 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E30E5A8D23B947560089F502 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E3C14A7223928A06000089B9 /* LaunchScreen.storyboard */,
+				E3C14A6A23928A05000089B9 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E30E5A8E23B9478B0089F502 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E3C14A7023928A06000089B9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E3C14A5823928A05000089B9 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +86,13 @@
 		E3C14A6323928A05000089B9 /* KacaDolar */ = {
 			isa = PBXGroup;
 			children = (
-				E3C14A7B2392F905000089B9 /* Model */,
-				E3C14A6423928A05000089B9 /* AppDelegate.swift */,
-				E3C14A6623928A05000089B9 /* SceneDelegate.swift */,
-				E3C14A6823928A05000089B9 /* ViewController.swift */,
-				E3C14A6A23928A05000089B9 /* Main.storyboard */,
-				E3C14A7023928A06000089B9 /* Assets.xcassets */,
-				E3C14A7223928A06000089B9 /* LaunchScreen.storyboard */,
 				E3C14A7523928A06000089B9 /* Info.plist */,
 				E3C14A6D23928A05000089B9 /* KacaDolar.xcdatamodeld */,
+				E3C14A6623928A05000089B9 /* SceneDelegate.swift */,
+				E30E5A8E23B9478B0089F502 /* Resources */,
+				E3C14A7B2392F905000089B9 /* Model */,
+				E30E5A8D23B947560089F502 /* View */,
+				E30E5A8B23B947200089F502 /* Controller */,
 			);
 			path = KacaDolar;
 			sourceTree = "<group>";
