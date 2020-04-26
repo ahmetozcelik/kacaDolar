@@ -8,19 +8,23 @@
 
 import UIKit
 
-let myUrl = "https://finans.truncgil.com/today.json"
-let url = URL(string: myUrl)!
-var dolarKuru:Double?
+let exchangeURL = "https://finans.truncgil.com/today.json"
+let url = URL(string: exchangeURL)!
+var dolarRate:Double?
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var sayiInput: UITextField!
+    @IBOutlet weak var numberInput: UITextField!
     @IBOutlet weak var convertLabel: UILabel!
+    @IBOutlet weak var writeDolarRate: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
        exchange()
+        writeDolarRate.text = String(dolarRate!)
+        
     }
     func exchange() {
         guard let myData = try? Data(contentsOf: url) else { return print("Veri yok. Internet baglantisini kontrol edin.") }
@@ -28,15 +32,15 @@ class ViewController: UIViewController {
             
             if let doviz = dovizler {
                 print(doviz)
-                dolarKuru = Double(doviz.dolar.satis!)
+                dolarRate = Double(doviz.dolar.satis!)
             }
     }
     @IBAction func exchangeBtn(_ sender: Any) {
-        if let sayi1 = Double(sayiInput.text!){
-            if let dolarKur = dolarKuru{
+        if let sayi1 = Double(numberInput.text!){
+            if let dolarKur = dolarRate{
                 convertLabel.text = String(sayi1 * dolarKur)}
         }
-    }
+    } 
 }
 
 
