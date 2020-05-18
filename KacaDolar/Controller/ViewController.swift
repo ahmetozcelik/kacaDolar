@@ -20,12 +20,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
+        
        exchange()
         writeDolarRate.text = String(dolarRate!)
         
     }
+    
     func exchange() {
         guard let myData = try? Data(contentsOf: url) else { return print("Veri yok. Internet baglantisini kontrol edin.") }
             let dovizler = try? JSONDecoder().decode(Doviz.self, from: myData)
@@ -41,6 +43,16 @@ class ViewController: UIViewController {
                 convertLabel.text = String(sayi1 * dolarKur)}
         }
     } 
+}
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+     let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+      tap.cancelsTouchesInView = false
+      view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard() {
+       view.endEditing(true)
+    }
 }
 
 
